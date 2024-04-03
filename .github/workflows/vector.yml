@@ -23,6 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          ls -ltrh
           pip install -r ${{ github.workspace }}/code/pgvector_requirements.txt
 
       - name: Start PostgreSQL
