@@ -23,8 +23,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          ls -ltrh ./code
-          pip install -r ./code/pgvector_requirements.txt
+          ls
+          ls -ltrh code
+          pip install -r code/pgvector_requirements.txt
 
       - name: Start PostgreSQL
         run: |
