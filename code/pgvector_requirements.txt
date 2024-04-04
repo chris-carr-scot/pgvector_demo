@@ -1,4 +1,4 @@
-psycopg2-binary
+psycopg
 jsonschema
 google-cloud-language
 sentence-transformers
