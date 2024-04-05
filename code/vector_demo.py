@@ -116,6 +116,9 @@ if __name__ == "__main__":
     for record in data:
         print(record)
         load_record(connection, record)
-
+    print('Did anyone adopt a cat this weekend?')
     generate_report(connection, args.output, 'Did anyone adopt a cat this weekend?')
+    print('Whats for breakfast?')
+    generate_report(connection, args.output, 'Did anyone adopt a cat this weekend?')
+    
     connection.close
