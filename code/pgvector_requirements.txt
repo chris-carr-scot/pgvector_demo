@@ -1,4 +1,5 @@
-psycopg
+psycopg[binary]
 jsonschema
 google-cloud-language
 sentence-transformers
+pgvector
