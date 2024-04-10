@@ -35,6 +35,9 @@ jobs:
         run: |
           sleep 10  # wait for PostgreSQL to initialize
           python code/vector_demo.py --server localhost --database vectordemo --user dbuser --password password --file data/vector.json --output output.csv
-          echo "----- CSV Report ------"
-          cat output.csv
-      
+          echo "----- Did anyone adopt a cat this weekend? ------"
+          cat cat_q1.csv
+          echo "-----Whats for breakfast? ------"
+          cat breakfast_q1.csv
+          echo "-----Are cats nice to eat for breakfast? ------"
+          cat breakfast_q2.csv
