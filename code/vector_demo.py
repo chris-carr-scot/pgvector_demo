@@ -106,7 +106,6 @@ if __name__ == "__main__":
     argParser.add_argument("-u", "--user", help="Database user")
     argParser.add_argument("-p", "--password", help="Database password")
     argParser.add_argument("-f", "--file", help="File To load")
-    argParser.add_argument("-o", "--output", help="File For Output")
 
     args = argParser.parse_args()
     connection = create_connection(args.server,args.database,args.user,args.password)
@@ -116,9 +115,11 @@ if __name__ == "__main__":
     for record in data:
         print(record)
         load_record(connection, record)
-    print('Did anyone adopt a cat this weekend?')
-    generate_report(connection, args.output, 'Did anyone adopt a cat this weekend?')
-    print('Whats for breakfast?')
-    generate_report(connection, args.output, 'Did anyone adopt a cat this weekend?')
+
+    generate_report(connection, 'cat_q1.csv', 'Did anyone adopt a cat this weekend?')
+
+    generate_report(connection, 'breakfast_q1.csv', 'Whats for breakfast?')
+
+    generate_report(connection, 'breakfast_q2.csv', 'Are cats nice to eat for breakfast?')
     
     connection.close
